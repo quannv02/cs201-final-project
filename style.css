@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1000;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s ease-in-out;
+}
+
+.menu {
+  margin: 16px 16px 0 16px;
+}
+
+.toolbar img {
+  padding: 5px;
+}
+
+.toolbar button {
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.toolbar button:hover {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.toolbar {
+    background-color: white;
+    opacity: 75%;
+    border-radius: 10px;
+    padding: 7.5px 10px;
+}
+
+.toolbar:first-child {
+    width: 210px;
+}
+
+.toolbar-e {
+  position: fixed;
+  margin: 5px 0 0 16px;
+  width: 210px;
+  padding: 0;
+  opacity: 90%;
+  background-color: white;
+}
+
+.background-menu li {
+  list-style: none;
+  padding: 12.5px 0 12.5px 17.5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.background-menu li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.background-menu li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: none;
+}
+
+.background-menu li:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.background-menu ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.todo-list {
+  width: auto;
+}
+
+.todo-list th:first-child {
+  width: 50px;
+}
+
+.todo-list th:nth-child(2) {
+  width: 50px;
+}
+
+.todo-list td:first-child {
+  text-align: center;
+  width: 50px;
+}
+
+.todo-list td input {
+  margin-top: 6px;
+}
+
+.todo-list th:nth-child(3) {
+  width: 500px;
+}
+
+.todo-list th:last-child {
+  width: 100px;
+}
+
+.todo-list button img {
+    width: 20px;
+    padding: 0;
+}
+
+.todo-list button:first-child img {
+    width: 17.5px;
+}
+
+.todo-list tr td:last-child {
+    padding: 4px 12px;
+}
+
+.todo-list button {
+    padding: 8px 6px;
+}
+
+.todo-list thead th {
+  border: none;
+}
+
+.todo-list tr {
+  border: none;
+}
+
+.todo-list tr > td {
+  border: none ;
+}
+
+thead {
+    display: block;
+}
+
+tbody {
+    display: block;
+    max-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+tfoot {
+  display: block;
+}
+
+.new-task {
+  display: block;
+  width: 106%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid darkgrey;
+  border-radius: .25rem;
+}
+
+input[type="text"], textarea {
+  background-color: white;
+  opacity: 75%
+}
+
+.new-task:focus-visible {
+  outline: none;
+}
+
+.timer input:focus-visible {
+  outline: none;
+}
+
+.todo-list td:nth-child(2) {
+    width: 50px;
+}
+
+.todo-list td:nth-child(3) {
+    width: 500px;
+}
+
+.todo-list td:last-child {
+    width: 100px;
+}
+
+.todo-list tfoot td:last-child {
+    padding: 12px;
+}
+
+.todo-list tfoot td:last-child button {
+  padding: 0;
+  border-radius: 5px;
+  width: 77.5%;
+  font-size: 25px;
+  color: darkgrey;;
+  border: 1px solid;
+  font-weight: 200;
+}
+
+::placeholder {
+  color: lightgray;
+  background-color: white;
+}
+
+::-ms-input-placeholder {
+  color: lightgray;
+  background-color: white;
+}
+
+.timer {
+  padding: 15px;
+}
+
+.timer input {
+  width: 85px;
+  width: 85px;
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  padding: 5px;
+}
+
+.eclock-button button {
+    background-color: white;
+}
