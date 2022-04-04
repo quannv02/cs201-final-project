@@ -166,7 +166,7 @@ tfoot {
   display: block;
 }
 
-.new-task {
+.new-task, .min-input, .sec-input {
   display: block;
   width: 106%;
   height: calc(1.5em + .75rem + 2px);
@@ -180,7 +180,7 @@ tfoot {
   border-radius: .25rem;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="number"], textarea {
   background-color: white;
   opacity: 75%
 }
@@ -219,28 +219,21 @@ input[type="text"], textarea {
   font-weight: 200;
 }
 
-::placeholder {
-  color: lightgray;
-  background-color: white;
-}
-
-::-ms-input-placeholder {
-  color: lightgray;
-  background-color: white;
-}
-
 .timer {
   padding: 15px;
 }
 
 .timer input {
-  width: 85px;
-  width: 85px;
+  width: 87px;
   border-radius: 5px;
   border: 1px solid darkgray;
-  padding: 5px;
+  padding: 5px 7.5px;
 }
 
 .eclock-button button {
     background-color: white;
+    border: 1px solid lightgray;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 13px;
 }

@@ -17,6 +17,7 @@ function startCount() {
   if(isPause == true) {
     myInterval = setInterval(updateCountdown, 1000);
     playBtn.disabled = true;
+    pauseBtn.disabled = false;
   } else {
     let minInput = document.querySelector(".min-input").valueAsNumber;
     let secInput = document.querySelector(".sec-input").valueAsNumber;
@@ -39,6 +40,7 @@ function startCount() {
 
     playBtn.disabled = true;
     pauseBtn.disabled = false;
+    playBtn.innerText = "Resume";
   }
 }
 
@@ -65,6 +67,7 @@ function updateCountdown() {
 function pauseCount() {
   clearInterval(myInterval);
   playBtn.disabled = false;
+  pauseBtn.disabled = true;
   isPause = true;
 }
 
@@ -74,6 +77,7 @@ function resetTimer() {
   isPause = false;
 
   playBtn.disabled = false;
+  playBtn.innerText = "Start";
   pauseBtn.disabled = true;
   document.querySelector(".min-input").value = null;
   document.querySelector(".sec-input").value = null;

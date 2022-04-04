@@ -95,14 +95,14 @@
 
     <div class="toolbar toolbar-e timer" style="display: none;">
       <div class="d-flex flex-column">
-        <form class="d-flex eclock justify-content-between mb-3" type="submit">
-          <input class="min-input" type="number" min="0" max="300" placeholder="Minute" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69">
-          <input class="sec-input" type="number" min="0" max="300" placeholder="Second" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69" >
+        <form class="d-flex eclock justify-content-between mb-2" style="cursor: default;" type="submit">
+          <input class="min-input" type="number" min="0" max="300" placeholder="Min" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69">
+          <input class="sec-input" type="number" min="0" max="300" placeholder="Sec" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69" >
         </form>
-        <div class="d-flex eclock-button">
-          <button class="pause-btn" type="button" name="button"><img src="toolbar-icons\pause-svgrepo-com.svg" alt="..."></button>
-          <button class="play-btn" type="button" name="button"><img src="toolbar-icons\play-svgrepo-com.svg" alt="..."></button>
-          <button class="reset-btn" type="button" name="button"><img src="toolbar-icons\refresh-svgrepo-com.svg" alt="..."></button>
+        <div class="d-flex eclock-button justify-content-between">
+          <button class="pause-btn" type="button" name="button">Pause</button>
+          <button class="play-btn" type="button" name="button" style="width: 65px">Start</button>
+          <button class="reset-btn" type="button" name="button">Reset</button>
         </div>
       </div>
     </div>
