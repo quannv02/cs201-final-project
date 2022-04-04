@@ -1,4 +1,5 @@
 let btnBackground = document.querySelector('.my-background');
+let btnMusic = document.querySelector('.my-music');
 let btnTodoList = document.querySelector('.my-todoList');
 let btnTimer = document.querySelector('.my-timer');
 let dBackground = document.querySelector('.background-menu');
@@ -22,22 +23,6 @@ btnBackground.addEventListener("click", () => {
   }
 });
 
-btnTodoList.addEventListener("click", () => {
-  if (dTodoList.style.display === "none") {
-    dBackground.style.display="none";
-    dSound.style.display="none";
-    dTodoList.style.display="block";
-    dTimer.style.display="none";
-    btnBackground.style.backgroundColor = "white";
-    btnMusic.style.backgroundColor = "white";
-    btnTodoList.style.backgroundColor = "lightgrey";
-    btnTimer.style.backgroundColor = "white";
-  } else {
-    dTodoList.style.display="none";
-    btnTodoList.style.backgroundColor = "white";
-  }
-});
-
 btnMusic.addEventListener("click", () => {
   if (dSound.style.display === "none") {
     dBackground.style.display="none";
@@ -51,6 +36,22 @@ btnMusic.addEventListener("click", () => {
   } else {
     dSound.style.display="none";
     btnMusic.style.backgroundColor = "white";
+  }
+});
+
+btnTodoList.addEventListener("click", () => {
+  if (dTodoList.style.display === "none") {
+    dBackground.style.display="none";
+    dSound.style.display="none";
+    dTodoList.style.display="block";
+    dTimer.style.display="none";
+    btnBackground.style.backgroundColor = "white";
+    btnMusic.style.backgroundColor = "white";
+    btnTodoList.style.backgroundColor = "lightgrey";
+    btnTimer.style.backgroundColor = "white";
+  } else {
+    dTodoList.style.display="none";
+    btnTodoList.style.backgroundColor = "white";
   }
 });
 
