@@ -98,8 +98,8 @@ function editTask(elem)
   btns[0].className = "btn-save";
   btns[1].className = "btn-cancel";
 
-  btns[0].innerHTML = '<img src="toolbar-icons\\check-svgrepo-com.svg" alt="save" class="btn-save">';
-  btns[1].innerHTML = '<img src="toolbar-icons\\close-svgrepo-com.svg" alt="cancel" class="btn-cancel">';
+  btns[0].innerHTML = '<img src="icons\\check-svgrepo-com.svg" alt="save" class="btn-save">';
+  btns[1].innerHTML = '<img src="icons\\close-svgrepo-com.svg" alt="cancel" class="btn-cancel">';
 
   return oldName;
 }
