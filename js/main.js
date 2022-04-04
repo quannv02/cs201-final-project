@@ -1,5 +1,4 @@
 let btnBackground = document.querySelector('.my-background');
-let btnMusic = document.querySelector('.my-music');
 let btnTodoList = document.querySelector('.my-todoList');
 let btnTimer = document.querySelector('.my-timer');
 let dBackground = document.querySelector('.background-menu');
@@ -15,17 +14,6 @@ btnBackground.addEventListener("click", () => {
     dTimer.style.display="none";
   } else {
     dBackground.style.display="none";
-  }
-});
-
-btnMusic.addEventListener("click", () => {
-  if (dSound.style.display === "none") {
-    dBackground.style.display="none";
-    dSound.style.display="block";
-    dTodoList.style.display="none";
-    dTimer.style.display="none";
-  } else {
-    dSound.style.display="none";
   }
 });
 

@@ -47,14 +47,14 @@ body {
 }
 
 .toolbar {
-    background-color: white;
-    opacity: 75%;
-    border-radius: 10px;
-    padding: 7.5px 10px;
+  background-color: white;
+  opacity: 75%;
+  border-radius: 10px;
+  padding: 7.5px 10px;
 }
 
 .toolbar:first-child {
-    width: 210px;
+  width: 160px;
 }
 
 .toolbar-e {
