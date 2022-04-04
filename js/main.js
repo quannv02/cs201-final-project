@@ -13,8 +13,13 @@ btnBackground.addEventListener("click", () => {
     dSound.style.display="none";
     dTodoList.style.display="none";
     dTimer.style.display="none";
+    btnBackground.style.backgroundColor = "lightgrey";
+    btnMusic.style.backgroundColor = "white";
+    btnTodoList.style.backgroundColor = "white";
+    btnTimer.style.backgroundColor = "white";
   } else {
     dBackground.style.display="none";
+    btnBackground.style.backgroundColor = "white";
   }
 });
 
@@ -24,8 +29,13 @@ btnMusic.addEventListener("click", () => {
     dSound.style.display="block";
     dTodoList.style.display="none";
     dTimer.style.display="none";
+    btnBackground.style.backgroundColor = "white";
+    btnMusic.style.backgroundColor = "lightgrey";
+    btnTodoList.style.backgroundColor = "white";
+    btnTimer.style.backgroundColor = "white";
   } else {
     dSound.style.display="none";
+    btnMusic.style.backgroundColor = "white";
   }
 });
 
@@ -35,8 +45,13 @@ btnTodoList.addEventListener("click", () => {
     dSound.style.display="none";
     dTodoList.style.display="block";
     dTimer.style.display="none";
+    btnBackground.style.backgroundColor = "white";
+    btnMusic.style.backgroundColor = "white";
+    btnTodoList.style.backgroundColor = "lightgrey";
+    btnTimer.style.backgroundColor = "white";
   } else {
     dTodoList.style.display="none";
+    btnTodoList.style.backgroundColor = "white";
   }
 });
 
@@ -46,7 +61,12 @@ btnTimer.addEventListener("click", () => {
     dSound.style.display="none";
     dTodoList.style.display="none";
     dTimer.style.display="block";
+    btnBackground.style.backgroundColor = "white";
+    btnMusic.style.backgroundColor = "white";
+    btnTodoList.style.backgroundColor = "white";
+    btnTimer.style.backgroundColor = "lightgrey";
   } else {
     dTimer.style.display="none";
+    btnTimer.style.backgroundColor = "white";
   }
 });

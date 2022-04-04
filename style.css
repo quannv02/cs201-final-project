@@ -39,11 +39,11 @@ body {
     padding: 0;
     border: 0;
     background: none;
+    border-radius: 5px;
 }
 
 .toolbar button:hover {
-  background-color: whitesmoke;
-  border-radius: 5px;
+  background-color: lightgrey !important;
 }
 
 .toolbar, .toolbar-t {
