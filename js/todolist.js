@@ -76,18 +76,30 @@ function editTask(elem)
   tr.children[2].textContent = "";
   tr.children[2].append(editNameInput);
 
+  // hide checkbox
+  let btnDone = tr.querySelector("input");
+  btnDone.style.display = "none";
+
+  // hide other buttons
+  let allBtn = tbody.querySelectorAll("button");
+  allBtn.forEach((btn) => {
+    btn.style.display = "none";
+  });
+
+  // disabled btn add
+  btnAdd.disabled = true;
+
   // change btn edit and btn delete into btn save and btn cancel
   let btns = tr.querySelectorAll("button");
+
+  btns[0].style.display = "";
+  btns[1].style.display = "";
 
   btns[0].className = "btn-save";
   btns[1].className = "btn-cancel";
 
   btns[0].innerHTML = '<img src="toolbar-icons\\check-svgrepo-com.svg" alt="save" class="btn-save">';
   btns[1].innerHTML = '<img src="toolbar-icons\\close-svgrepo-com.svg" alt="cancel" class="btn-cancel">';
-
-  // hide checkbox
-  let btnDone = tr.querySelector("input");
-  btnDone.style.display = "none";
 
   return oldName;
 }
@@ -99,9 +111,27 @@ function saveUpdateTask(elem)
 
   // update task name and remove input
   let editNameInput = tr.querySelector("input.new-task");
+  if(editNameInput.value == "")
+  {
+    alert("Task name cannot be blank.");
+    return;
+  }
   let updatedName = editNameInput.value;
   editNameInput.remove();
   tr.children[2].textContent = updatedName;
+
+  // show checkbox
+  let btnDone = tr.querySelector("input");
+  btnDone.style.display = "";
+
+  // show other buttons
+  let allBtn = tbody.querySelectorAll("button");
+  allBtn.forEach((btn) => {
+    btn.style.display = "";
+  });
+
+  // disabled btn add
+  btnAdd.disabled = false;
 
   // change btn save and btn cancel into btn edit and btn delete
   let btns = tr.querySelectorAll("button");
@@ -111,10 +141,6 @@ function saveUpdateTask(elem)
 
   btns[0].innerHTML = '<img src="toolbar-icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
   btns[1].innerHTML = '<img src="toolbar-icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
-
-  // show checkbox
-  let btnDone = tr.querySelector("input");
-  btnDone.style.display = "";
 }
 
 function cancelUpdateTask(elem, oldName)
@@ -126,6 +152,19 @@ function cancelUpdateTask(elem, oldName)
   editNameInput.remove();
   tr.children[2].textContent = oldName;
 
+  // show checkbox
+  let btnDone = tr.querySelector("input");
+  btnDone.style.display = "";
+
+  // show other buttons
+  let allBtn = tbody.querySelectorAll("button");
+  allBtn.forEach((btn) => {
+    btn.style.display = "";
+  });
+
+  // disabled btn add
+  btnAdd.disabled = false;
+
   // change btn save and btn cancel into btn edit and btn delete
   let btns = tr.querySelectorAll("button");
 
@@ -134,11 +173,6 @@ function cancelUpdateTask(elem, oldName)
 
   btns[0].innerHTML = '<img src="toolbar-icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
   btns[1].innerHTML = '<img src="toolbar-icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
-
-  // show checkbox
-  let btnDone = tr.querySelector("input");
-  btnDone.style.display = "";
-
 }
 
 // 5. Task done
