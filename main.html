@@ -23,8 +23,13 @@
         <button class="my-todoList"><img src="toolbar-icons\note2-svgrepo-com.svg" alt=""></button>
         <button class="my-timer"><img src="toolbar-icons\stopwatch-svgrepo-com.svg" alt=""></button>
       </div>
-      <div class="toolbar">
-        <a href="about.html"><button><img src="toolbar-icons\back-svgrepo-com.svg" alt=""></button></a>
+      <div class="d-flex">
+        <div class="time-appear toolbar-t ml-3 mr-3" style="display: none;" >
+          <h3 id="appear-here" class="m-1"></h3>
+        </div>
+        <div class="toolbar">
+          <a href="about.html"><button><img src="toolbar-icons\back-svgrepo-com.svg" alt=""></button></a>
+        </div>
       </div>
     </header>
 
@@ -91,13 +96,13 @@
     <div class="toolbar toolbar-e timer" style="display: none;">
       <div class="d-flex flex-column">
         <form class="d-flex eclock justify-content-between mb-3" type="submit">
-          <input type="number" placeholder="Minute">
-          <input type="number" placeholder="Second">
+          <input class="min-input" type="number" min="0" max="300" placeholder="Minute" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69">
+          <input class="sec-input" type="number" min="0" max="300" placeholder="Second" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69" >
         </form>
         <div class="d-flex eclock-button">
-          <button type="button" name="button"><img src="toolbar-icons\pause-svgrepo-com.svg" alt="..."></button>
-          <button type="button" name="button"><img src="toolbar-icons\play-svgrepo-com.svg" alt="..."></button>
-          <button type="button" name="button"><img src="toolbar-icons\refresh-svgrepo-com.svg" alt="..."></button>
+          <button class="pause-btn" type="button" name="button"><img src="toolbar-icons\pause-svgrepo-com.svg" alt="..."></button>
+          <button class="play-btn" type="button" name="button"><img src="toolbar-icons\play-svgrepo-com.svg" alt="..."></button>
+          <button class="reset-btn" type="button" name="button"><img src="toolbar-icons\refresh-svgrepo-com.svg" alt="..."></button>
         </div>
       </div>
     </div>
