@@ -38,6 +38,7 @@ function play(sound) {
         sound.play();
     } else {
         count = 0;
+        sound.currentTime = 0;
         sound.pause();
     }
 } 
