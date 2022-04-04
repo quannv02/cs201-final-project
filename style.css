@@ -223,6 +223,14 @@ input[type="text"], input[type="number"], textarea {
   padding: 15px;
 }
 
+.time-appear {
+  width: 100px;
+}
+
+.time-appear h3 {
+  margin: 5px 0 0 0 !important;
+}
+
 .timer input {
   width: 87px;
   border-radius: 5px;

@@ -61,6 +61,8 @@ function updateCountdown() {
     alert("Time's Up!");
     timeAppear.style.display = "none";
     playBtn.disabled = false;
+    playBtn.innerText = "Start";
+    pauseBtn.disabled = true;
   }
 }
 
