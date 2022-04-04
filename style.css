@@ -46,7 +46,7 @@ body {
   border-radius: 5px;
 }
 
-.toolbar {
+.toolbar, .toolbar-t {
     background-color: white;
     opacity: 75%;
     border-radius: 10px;
