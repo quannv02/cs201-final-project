@@ -139,8 +139,8 @@ function saveUpdateTask(elem)
   btns[0].className = "btn-edit";
   btns[1].className = "btn-delete";
 
-  btns[0].innerHTML = '<img src="toolbar-icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
-  btns[1].innerHTML = '<img src="toolbar-icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
+  btns[0].innerHTML = '<img src="icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
+  btns[1].innerHTML = '<img src="icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
 }
 
 function cancelUpdateTask(elem, oldName)
@@ -171,8 +171,8 @@ function cancelUpdateTask(elem, oldName)
   btns[0].className = "btn-edit";
   btns[1].className = "btn-delete";
 
-  btns[0].innerHTML = '<img src="toolbar-icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
-  btns[1].innerHTML = '<img src="toolbar-icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
+  btns[0].innerHTML = '<img src="icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit">';
+  btns[1].innerHTML = '<img src="icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete">';
 }
 
 // 5. Task done
