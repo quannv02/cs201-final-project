@@ -18,13 +18,18 @@
 
     <header class="d-flex menu justify-content-between p-0">
       <div class="d-flex flex-wrap justify-content-between toolbar">
-        <button class="my-background"><img src="toolbar-icons\photo-svgrepo-com.svg" alt=""></button>
-        <button class="my-music"><img src="toolbar-icons\musiclist-svgrepo-com.svg" alt=""></button>
-        <button class="my-todoList"><img src="toolbar-icons\note2-svgrepo-com.svg" alt=""></button>
-        <button class="my-timer"><img src="toolbar-icons\stopwatch-svgrepo-com.svg" alt=""></button>
+        <button class="my-background"><img src="icons\photo-svgrepo-com.svg" alt=""></button>
+        <button class="my-music"><img src="icons\musiclist-svgrepo-com.svg" alt=""></button>
+        <button class="my-todoList"><img src="icons\note2-svgrepo-com.svg" alt=""></button>
+        <button class="my-timer"><img src="icons\stopwatch-svgrepo-com.svg" alt=""></button>
       </div>
-      <div class="toolbar">
-        <a href="about.html"><button><img src="toolbar-icons\back-svgrepo-com.svg" alt=""></button></a>
+      <div class="d-flex">
+        <div class="time-appear toolbar-t ml-3 mr-3" style="display: none;" >
+          <h3  class ="text-center m-0" id="appear-here"></h3>
+        </div>
+        <div class="toolbar">
+          <a href="about.html"><button><img src="icons\back-svgrepo-com.svg" alt=""></button></a>
+        </div>
       </div>
     </header>
 
@@ -35,7 +40,28 @@
     </div>
 
     <div class="toolbar toolbar-e sound-menu" style="display: none;">
-
+      <ul>
+        <li class="playBtn1">
+          Serenity
+          <audio src="sounds/beat1.mp3" id="beat1" type="audio/mp3" loop></audio>
+        </li>
+        <li class="playBtn2">
+          Lo-Fi
+          <audio src="sounds/beat2.mp3" id="beat2" type="audio/mp3" loop></audio>
+        </li>
+        <li class="playBtn3">
+          Alone
+          <audio src="sounds/Nymano - The Man Alone.mp3" id="beat3" type="audio/mp3" loop></audio>
+        </li>
+        <li class="playBtn4">
+          Chill
+          <audio src="sounds/beat4.mp3" id="beat4" type="audio/mp3" loop></audio>
+        </li>
+        <li class="playBtn5">
+          Elegant
+          <audio src="sounds/Raining.mp3" id="beat5" type="audio/mp3" loop></audio>
+        </li>
+      </ul>
     </div>
 
     <div class="toolbar toolbar-e todo-list" style="display: none;">
@@ -54,8 +80,8 @@
             <td scope="row">1</td>
             <td>Mark</td>
             <td class="d-flex justify-content-end">
-              <button class="btn-edit"><img src="toolbar-icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="toolbar-icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
+              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
+              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
             </td>
           </tr>
           <tr>
@@ -63,8 +89,8 @@
             <td scope="row">2</td>
             <td>Jacob</td>
             <td class="d-flex justify-content-end">
-              <button class="btn-edit"><img src="toolbar-icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="toolbar-icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
+              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
+              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
             </td>
           </tr>
           <tr>
@@ -72,8 +98,8 @@
             <td scope="row">3</td>
             <td>Larry</td>
             <td class="d-flex  justify-content-end">
-              <button class="btn-edit"><img src="toolbar-icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="toolbar-icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
+              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
+              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
             </td>
           </tr>
         </tbody>
@@ -90,14 +116,14 @@
 
     <div class="toolbar toolbar-e timer" style="display: none;">
       <div class="d-flex flex-column">
-        <form class="d-flex eclock justify-content-between mb-3" type="submit">
-          <input type="number" placeholder="Minute">
-          <input type="number" placeholder="Second">
+        <form class="d-flex eclock justify-content-between mb-2" style="cursor: default;" type="submit">
+          <input class="min-input" type="number" min="0" max="300" placeholder="Min" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69">
+          <input class="sec-input" type="number" min="0" max="300" placeholder="Sec" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69" >
         </form>
-        <div class="d-flex eclock-button">
-          <button type="button" name="button"><img src="toolbar-icons\pause-svgrepo-com.svg" alt="..."></button>
-          <button type="button" name="button"><img src="toolbar-icons\play-svgrepo-com.svg" alt="..."></button>
-          <button type="button" name="button"><img src="toolbar-icons\refresh-svgrepo-com.svg" alt="..."></button>
+        <div class="d-flex eclock-button justify-content-between">
+          <button class="pause-btn" type="button" name="button">Pause</button>
+          <button class="play-btn" type="button" name="button" style="width: 65px">Start</button>
+          <button class="reset-btn" type="button" name="button">Reset</button>
         </div>
       </div>
     </div>
