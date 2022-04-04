@@ -66,29 +66,29 @@ body {
   background-color: white;
 }
 
-.background-menu li {
+.background-menu li, .sound-menu li {
   list-style: none;
   padding: 12.5px 0 12.5px 17.5px;
   border-bottom: 1px solid lightgray;
 }
 
-.background-menu li:first-child {
+.background-menu li:first-child, .sound-menu li:first-child {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.background-menu li:last-child {
+.background-menu li:last-child, .sound-menu li:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom: none;
 }
 
-.background-menu li:hover {
+.background-menu li:hover, .sound-menu li:hover {
   cursor: pointer;
   background-color: whitesmoke;
 }
 
-.background-menu ul {
+.background-menu ul, .sound-menu ul {
     padding: 0;
     margin-bottom: 0;
 }
