@@ -40,4 +40,4 @@ function play(sound) {
         count = 0;
         sound.pause();
     }
-}
+} 
