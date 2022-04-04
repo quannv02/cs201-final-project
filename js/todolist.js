@@ -29,8 +29,8 @@ function addTask(name)
     <td scope="row">${tbody.childElementCount + 1}</td>
     <td>${name}</td>
     <td class="d-flex justify-content-end">
-      <button class="btn-edit"><img src="toolbar-icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-      <button class="btn-delete"><img src="toolbar-icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
+      <button class="btn-edit"><img src="icons\\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
+      <button class="btn-delete"><img src="icons\\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
     </td>
   </tr>`;
   tbody.insertAdjacentHTML("beforeend", output);
