@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: ghostwhite;
+  color: slateblue;
+}
+
+.hero {
+  padding: 60px 50px 150px 50px;
+}
+
+.hero h1 {
+  font-size: 106px;
+  text-align: center;
+  font-weight: 800;
+  margin-left: 34px;
+  margin-top: -10px;
+}
+
+.hero h2 {
+  font-size: 52.5px;
+  text-align: center;
+  line-height: 57.5px;
+  margin-top: 140px;
+  font-weight: 100;
+}
+ a {
+    text-decoration: none;
+    color: slateblue;
+ }
+
+ .btn {
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 45px;
+   margin: 0 0 2em;
+   max-width: 160px;
+   position: relative;
+   text-decoration: none;
+   text-transform: uppercase;
+   width: 100%;
+   color: slateblue;
+   letter-spacing: 2px;
+ }
+
+ .btn:hover {
+   text-decoration: none;
+   letter-spacing: 2.25px;
+   font-weight: 700;
+ }
+
+ .btn svg {
+   height: 56px;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+ }
+ .btn rect {
+   fill: none;
+   stroke: slateblue;
+   stroke-width: 2;
+   stroke-dasharray: 422, 0;
+   transition: all 0.35s linear;
+ }
+
+ .btn:hover rect {
+  stroke-width: 3.5;
+  stroke-dasharray: 30, 310;
+  stroke-dashoffset: 60;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.footer {
+  padding: 12.5px 20px;
+}
+
+.info-description, .copyright {
+  font-weight: 600;
+  padding: 6px 12.5px 0;
+}
+
+.member {
+  color: white;
+  background: slateblue;
+  border-radius: 20px;
+  font-weight: 400;
+  padding: 5px 12.5px;
+  margin: 0 10px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.member:hover {
+  font-weight: 600;
+  padding: 5px 15px;
+  transition: all 0.5s;
+box-shadow: 0px 0px 5px grey;}
+
+@media (max-width: 1250px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .copyright {
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 925px) {
+  .info-description {
+    padding-bottom: 5px;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .member {
+    flex-basis: 37.5%;
+    margin: 5px;
+  }
+
+  .info-content {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 590px) {
+  .hero h1 {
+
+  font-size: 50px;margin-left: 0px;}
+
+  .hero h2 {
+
+  font-size: 27.5px;line-height: 30px;}
+}

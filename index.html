@@ -2,137 +2,52 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Welcome to WoStu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="video-container">
-      <video autoplay muted loop id="myVideo" src="" type="video/mp4">
-      </video>
-    </div>
-
-    <header class="d-flex menu justify-content-between p-0">
-      <div class="d-flex flex-wrap justify-content-between toolbar">
-        <button class="my-background"><img src="icons\photo-svgrepo-com.svg" alt=""></button>
-        <button class="my-music"><img src="icons\musiclist-svgrepo-com.svg" alt=""></button>
-        <button class="my-todoList"><img src="icons\note2-svgrepo-com.svg" alt=""></button>
-        <button class="my-timer"><img src="icons\stopwatch-svgrepo-com.svg" alt=""></button>
+    <div class="d-flex flex-column hero">
+      <h2>GET YOURSELF <br> A VIRTUAL SPACE</h2>
+      <h1>WOSTU.</h1>
+      <div class="d-flex justify-content-center">
+        <a href="main.html" class="btn m-0" id="buttonText">
+          <svg>
+            <rect x="0" y="0" fill="none" width="100%" height="100%" id="buttonStroke"/>
+          </svg>
+          Let's Wotsu
+        </a>
       </div>
-      <div class="d-flex">
-        <div class="time-appear toolbar-t ml-3 mr-3" style="display: none;" >
-          <h3  class ="text-center m-0" id="appear-here"></h3>
-        </div>
-        <div class="toolbar">
-          <a href="about.html"><button><img src="icons\back-svgrepo-com.svg" alt=""></button></a>
-        </div>
+    </div>
+    <div class="d-flex footer justify-content-between flex-wrap">
+      <div class="copyright text-center" style="font-weight: 400">
+        ©2022 Copyright: Wostu / Inspired by LifeAt / Videos via Pexels
       </div>
-    </header>
-
-    <div class="toolbar toolbar-e background-menu" style="display: none;">
-      <ul>
-
-      </ul>
-    </div>
-
-    <div class="toolbar toolbar-e sound-menu" style="display: none;">
-      <ul>
-        <li class="playBtn1">
-          Serenity
-          <audio src="sounds/beat1.mp3" id="beat1" type="audio/mp3" loop></audio>
-        </li>
-        <li class="playBtn2">
-          Lo-Fi
-          <audio src="sounds/beat2.mp3" id="beat2" type="audio/mp3" loop></audio>
-        </li>
-        <li class="playBtn3">
-          Alone
-          <audio src="sounds/Nymano - The Man Alone.mp3" id="beat3" type="audio/mp3" loop></audio>
-        </li>
-        <li class="playBtn4">
-          Chill
-          <audio src="sounds/beat4.mp3" id="beat4" type="audio/mp3" loop></audio>
-        </li>
-        <li class="playBtn5">
-          Elegant
-          <audio src="sounds/Raining.mp3" id="beat5" type="audio/mp3" loop></audio>
-        </li>
-      </ul>
-    </div>
-
-    <div class="toolbar toolbar-e todo-list" style="display: none;">
-      <table class="table m-0">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">#</th>
-            <th scope="col">My tasks</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="checkbox" class="btn-done"></td>
-            <td scope="row">1</td>
-            <td>Mark</td>
-            <td class="d-flex justify-content-end">
-              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" class="btn-done"></td>
-            <td scope="row">2</td>
-            <td>Jacob</td>
-            <td class="d-flex justify-content-end">
-              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" class="btn-done"></td>
-            <td scope="row">3</td>
-            <td>Larry</td>
-            <td class="d-flex  justify-content-end">
-              <button class="btn-edit"><img src="icons\edit-svgrepo-com.svg" alt="edit" class="btn-edit"></button>
-              <button class="btn-delete"><img src="icons\trash-svgrepo-com.svg" alt="delete" class="btn-delete"></button>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td></td>
-            <td><input type="text" class="new-task mt-0" placeholder="Enter task name"></td>
-            <td class="d-flex justify-content-end"><button class="btn-add">+</button></td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-
-    <div class="toolbar toolbar-e timer" style="display: none;">
-      <div class="d-flex flex-column">
-        <form class="d-flex eclock justify-content-between mb-2" style="cursor: default;" type="submit">
-          <input class="min-input" type="number" min="0" max="300" placeholder="Min" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69">
-          <input class="sec-input" type="number" min="0" max="300" placeholder="Sec" onKeyPress="if(this.value.length==3) return false;" onKeyDown="return event.keyCode !== 189 && event.keyCode !== 69" >
-        </form>
-        <div class="d-flex eclock-button justify-content-between">
-          <button class="pause-btn" type="button" name="button">Pause</button>
-          <button class="play-btn" type="button" name="button" style="width: 65px">Start</button>
-          <button class="reset-btn" type="button" name="button">Reset</button>
+      <div class="d-flex info justify-content-center flex-wrap">
+        <div class="info-description text-center">
+          Our team
+        </div>
+        <div class="d-flex info-content justify-content-between flex-wrap">
+          <div class="member text-center" id="m1">
+            Nguyen Phuc Hien
+          </div>
+          <div class="member text-center" id="m2">
+            Nguyen Ngan Khanh
+          </div>
+          <div class="member text-center" id="m3">
+            Nguyen Vinh Quan
+          </div>
+          <div class="member text-center" id="m4">
+            Truong To Tran
+          </div>
         </div>
       </div>
     </div>
-
-    <script type="text/javascript" src="js\main.js"></script>
-    <script type="text/javascript" src="js\background.js"></script>
-    <script type="text/javascript" src="js\sound.js"></script>
-    <script type="text/javascript" src="js\timer.js"></script>
-    <script type="text/javascript" src="js\todolist.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
