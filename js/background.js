@@ -26,8 +26,17 @@ function backgroundInit() {
   staticBackgroundCatalog.forEach((background, i) => {
     let name = "background" + background.name;
     let btn = document.getElementById(name);
+    if (i == 0) {
+      document.getElementById('myVideo').src = background.url;
+      btn.style.backgroundColor = "whitesmoke";
+    }
     btn.addEventListener("click", () => {
       document.getElementById('myVideo').src = background.url;
+      let allBtn = document.querySelectorAll(".background-menu ul li");
+      allBtn.forEach((button, i) => {
+        button.style.backgroundColor = "white";
+      })
+      btn.style.backgroundColor = "whitesmoke";
     })
   });
 };
