@@ -180,6 +180,10 @@ tfoot {
   border-radius: .25rem;
 }
 
+.edit-task {
+  margin-top: -5px !important;
+}
+
 input[type="text"], input[type="number"], textarea {
   background-color: white;
   opacity: 75%

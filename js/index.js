@@ -34,4 +34,4 @@ function () {
   document.getElementById('m4').style.backgroundColor = colors[x].txt;
   if (x == colors.length - 1) x = 0;
   else x++;
-},2500);
+},2000);

@@ -70,11 +70,9 @@ function editTask(elem)
   let tr = elem.closest("tr");
 
   // add edit name input
-  let editNameInput = taskName.cloneNode();
   let oldName = tr.children[2].textContent;
-  editNameInput.setAttribute("value", oldName);
-  tr.children[2].textContent = "";
-  tr.children[2].append(editNameInput);
+  let editNameInput = `<input type="text" class="new-task edit-task" placeholder="Enter task name" value="${oldName}">`;
+  tr.children[2].innerHTML = editNameInput;
 
   // hide checkbox
   let btnDone = tr.querySelector("input");
@@ -110,7 +108,7 @@ function saveUpdateTask(elem)
   let tr = elem.closest("tr");
 
   // update task name and remove input
-  let editNameInput = tr.querySelector("input.new-task");
+  let editNameInput = tr.querySelector("input.edit-task");
   if(editNameInput.value == "")
   {
     alert("Task name cannot be blank.");
@@ -148,7 +146,7 @@ function cancelUpdateTask(elem, oldName)
   let tr = elem.closest("tr");
 
   // update task name and remove input
-  let editNameInput = tr.querySelector("input.new-task");
+  let editNameInput = tr.querySelector("input.edit-task");
   editNameInput.remove();
   tr.children[2].textContent = oldName;
 
