@@ -189,6 +189,10 @@ input[type="text"], input[type="number"], textarea {
   outline: none;
 }
 
+.edit-task {
+  margin-top: -5px !important;
+}
+
 .timer input:focus-visible {
   outline: none;
 }
