@@ -21,8 +21,9 @@
 - Student ID: 2059046
 - Class: 20BIT1
 - Email: 2059046@itec.hcmus.edu.vn
-## II. Github
-URL:
+## II. Project Link
+- Website URL: https://quannv02.github.io/cs201-final-project/
+- Github Repo: https://github.com/quannv02/cs201-final-project/
 ## 3. Project Detail
 WOSTU provides users with virtual space for studying and working, includes 4 features:
 - Changing background
